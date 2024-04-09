@@ -1,0 +1,832 @@
+/* ------------------ Start Main Style Templat --------------------- */
+:root {
+    --orang-color: #FF6057;
+    --grey-color: #3B3A3A;
+    --White-color: #ffffff;
+    --black-color: #000000;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--White-color);
+}
+button {
+    border: 0;
+    outline: 0;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+}
+#page {
+    overflow: hidden;
+}
+li {
+    list-style: none;
+}
+a,
+img {
+    transition: 500ms ease;
+}
+a {
+    text-decoration: none;
+    color: var(--orang-color);
+}
+a:is(:hover,:focus-visible) {
+    color: var(--grey-color);
+}
+img {
+    max-width: 100%;
+}
+/* ------------------ End Main Style Templat --------------------- */
+/* ------------------ Start Reused style --------------------- */
+.container {
+    max-width: 100%;
+    padding-inline: 16px ;
+    display: grid;
+}
+.button {
+    background-image: linear-gradient(to left, #7C1C80, #FF6057);
+    color: var(--White-color);
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius: 50px;
+    background-size: 100%;
+    transition: 400ms;
+}
+.button:hover {
+    color: var(--White-color);
+    background-size: 150%;
+}
+.head {
+    position: relative;
+    padding-block-start: 20px;
+    color: var(--grey-color);
+}
+.head::before {
+    content: '';
+    position: absolute;
+    background-color: var(--orang-color);
+    height: 5px;
+    width: 70px;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+}
+/* swiper Slider */
+.slider {
+    position: relative;
+    padding-block-end: 30px;
+}
+.feedback .swiper-pagination-bullet {
+    background-color: #8f8f8f;
+    opacity: 1;
+}
+.feedback .swiper-pagination-bullet-active {
+    background-color: #FF6057;
+}
+/* ------------------ End Reused style --------------------- */
+/* ------------------ Start Header --------------------- */
+.header {
+    padding-block-start: 25px;
+    padding-block-end: 20px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--White-color);
+    visibility: hidden;
+    transition: 400ms;
+    opacity: 0;
+    z-index: 4;
+}
+.overlay.active {
+    opacity: .4;
+    visibility: visible;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .button-navbar {
+    color: var(--White-color);
+    font-size: 1.5rem;
+}
+.header .navbar {
+    position: fixed;
+    background-color: var(--orang-color);
+    top: 0;
+    right: 0;
+    height: 100vh;
+    max-width: 350px;
+    width: 100%;
+    padding-inline: 30px;
+    padding-block: 40px;
+    transform: translateX(350px);
+    transition: 400ms ease-in-out;
+    z-index: 5;
+}
+.header .navbar.active {
+    transform: translateX(0);
+}
+.navbar-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-list {
+    padding-block-start: 30px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 90px);
+
+}
+.menu-link {
+    color: var(--White-color);
+    display: block;
+    margin-block-end: 10px;
+}
+.menu-link:hover {
+    padding-inline-start: 10px;
+    color: var(--White-color);
+}
+.navbar-list .button {
+    background: var(--White-color);
+    color: #3B3A3A;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    margin-block-start: auto;
+}
+
+/* ------------------ End Header --------------------- */
+/* ------------------ Start Intro --------------------- */
+.intro {
+    background-image: url(../intro/bg-intro.png);
+    background-size: cover;
+    padding-block-start: 150px;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.intro .text {
+    color: var(--White-color);
+    font-size: .9rem;
+    display: grid;
+    gap: 10px;
+    text-align: center;
+}
+.intro .text h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.intro .text h4 {
+    font-weight: 900;
+    font-size: 1.7rem;
+}
+.intro .image img {
+    transform: scale(1.2);
+    margin-block-start: 30px;
+}
+.intro .text a {
+    background: var(--White-color);
+    color: var(--orang-color);
+}
+/* ------------------ End Intro --------------------- */
+/* ------------------ Start Clients --------------------- */
+.client {
+    margin-block: 50px;
+}
+.client ul {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.client ul li {
+    height: 50px;
+    flex: 0 0 auto;
+}
+.client ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+/* ------------------ End Clients --------------------- */
+/* ------------------ Start section-01 --------------------- */
+.section-01 {
+    padding-block: 50px;
+    font-size: .9rem;
+}
+.section-01 .text {
+    margin-block-end: 45px;
+}
+.section-01 .text h2 {
+    font-size: 1.5rem;
+    margin-block-end: 20px;
+}
+.section-01 .text a {
+    display: inline-block;
+    margin-block-start: 20px;
+
+}
+.section-01 .text a ion-icon {
+    margin-inline-start: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.section-01 ul {
+    display: grid;
+    gap: 30px;
+}
+.section-01 ul li .item .image {
+    width: 79px;
+    height: 79px;
+    background-color: #F1291E;
+    border-radius: 50%;
+    margin-block-end: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 26%);
+}
+.section-01 ul li:nth-child(2) .item .image {
+    background-color: #36C5AD;
+}
+.section-01 ul li:nth-child(3) .item .image {
+    background-color: #CB4BF8;
+}
+.section-01 ul li:nth-child(4) .item .image {
+    background-color: #56E65B;
+}
+.section-01 ul li .item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    
+}
+.section-01 ul li .item .caption h4 {
+    font-weight: 600;
+    margin-block-end: 15px;
+    position: relative;
+    padding-block-end: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.section-01 ul li .item .caption h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--orang-color);
+    height: 5px;
+    width: 80px;
+    border-radius: 5px;
+}
+/* ------------------ End section-01 --------------------- */
+/* ------------------ Start section-02 --------------------- */
+.section-02 {
+    padding-block: 50px;
+    font-size: .9rem;
+    position: relative;
+    overflow: hidden;
+}
+.section-02::after {
+    content: '';
+    position: absolute;
+    background-image: url(../section01/bg01.svg);
+    left: -40%;
+    bottom: 0;
+    width: 300px;
+    height: 250px;
+    background-size: contain;
+    z-index: -1;
+}
+.section-02:is(.right)::after {
+    left: unset;
+    right: -60%;
+}
+.section-02 .text {
+    margin-block-end: 40px;
+}
+.section-02 .text h3 {
+    margin-block-end: 20px;
+    font-size: 1.3rem;
+}
+.section-02 .text p {
+    margin-block-end: 20px;
+    
+}
+.section-02 .text a ion-icon {
+    display: inline-block;
+    margin-inline-start: 20px;
+    vertical-align: middle;
+    
+}
+/* ------------------ End section-02 --------------------- */
+/* ------------------ Start section-03 --------------------- */
+.section-03 {
+    text-align: center;
+    padding-block: 50px;
+}
+.section-03 h2 {
+    color: var(--grey-color);
+    padding-block: 15px;
+}
+.section-03 p {
+    color: #8f8f8f;
+}
+.section-03 .image {
+    margin-block-start: 40px;
+}
+/* ------------------ End section-03 --------------------- */
+/* ------------------ Start section-04 --------------------- */
+
+/* ------------------ End section-04 --------------------- */
+/* ------------------ Start section-05 --------------------- */
+.section-05 {
+    padding-block: 50px;
+    font-size: .9rem;
+}
+.section-05 .text {
+    margin-block-end: 40px;
+}
+.section-05 .text h3 {
+    font-size: 1.3rem;
+    margin-block-end: 15px;
+}
+.section-05 .text .button {
+    margin-block-start: 20px;
+    border-radius: 10px;
+}
+.section-05 .text .button:hover {
+    color: var(--White-color);
+    transform: translateY(5px);
+}
+.section-05  ul {
+    display: grid;
+    gap: 30px;
+}
+.section-05  ul li {
+    display: flex;
+    position: relative;
+}
+.section-05  ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    height: calc(100% - 60px);
+    width: 2px;
+    background-color: #BCBCBC;
+    left: 25px;
+    top: 70px;
+}
+.section-05  ul li h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-block-end: 20px;
+}
+.section-05  ul li span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+    background-color: var(--orang-color);
+    flex: 0 0 auto;
+    margin-inline-end: 25px;
+    border-radius: 50%;
+    color: var(--White-color);
+    font-weight: 800;
+}
+/* ------------------ End section-05 --------------------- */
+/* ------------------ Start Numbers --------------------- */
+.numbers {
+    padding-block: 50px;
+    text-align: center;
+    color: var(--grey-color);
+}
+.numbers h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-block-end: 50px ;
+}
+.numbers ul {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.numbers ul li .item .num {
+    color: var(--orang-color);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-block-end: 10px;
+}
+.numbers ul li .item .text {
+    font-weight: 600;
+}
+/* ------------------ End Numbers --------------------- */
+/* ------------------ Start FeedBaack --------------------- */
+.feedback {
+    padding-block: 50px;
+    overflow: hidden;
+    font-size: .9rem;
+}
+.feedback .container {
+    display: block;
+}
+.feedback .item-slid {
+    text-align: center;
+    background-color: var(--White-color);
+    padding-inline: 20px;
+    padding-block: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 26%);
+    margin: 20px;
+    border-radius: 16px;
+    color: #8f8f8f;
+}
+.feedback .item-slid .img-user {
+    height: 205px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-block-end: 25px;
+
+}
+.feedback .item-slid .img-user img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.feedback .item-slid .caption h2{
+    color: #3B3A3A;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-block-end: 10px;
+}
+.feedback .item-slid .caption .desc{
+    margin-block-end: 10px;
+}
+.feedback .item-slid .caption .stars{
+    color: #ffd700 ;
+}
+.feedback .slider {
+    margin-block-end: 40px;
+}
+.feedback .content-info h3 {
+    font-size: 1.4rem;
+    color: #3B3A3A;
+    font-weight: 900;
+    margin-block-end: 20px;
+}
+.feedback .content-info p {
+    color: #8f8f8f;
+    margin-block-end: 25px;
+
+}
+.feedback .content-info .button {
+    border-radius: 10px;
+
+}
+/* ------------------ End FeedBaack --------------------- */
+/* ------------------ Start Footer --------------------- */
+.footer {
+    background-color: #333333;
+    color: var(--White-color);
+    padding-block: 40px;
+    font-size: .9rem;
+}
+.footer a {
+    color: var(--White-color);
+}
+.footer .item-footer {
+    margin-bottom: 35px;
+}
+.footer .logo-footer {
+    font-size: 2rem;
+    font-weight: 900;
+    display: block;
+    margin-block-end: 15px;
+}
+.footer .item-footer ul {
+    display: grid;
+    gap: 8px;
+}
+.footer .item-footer ul li a:hover {
+    padding-inline-start: 5px;
+}
+.footer .item-footer h4,
+.footer .item-footer h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-block-end: 15px;
+
+}
+.footer .item-footer .letter {
+    position: relative;
+}
+.footer .item-footer .letter input {
+    font: inherit;
+    outline: 0;
+    border: 0;
+    border-radius: 50px;
+
+}
+.footer .item-footer .letter input[type="email"] {
+    width: 100%;
+    display: block;
+    padding-block: 10px;
+    padding-inline-start: 15px;
+    padding-inline-end: 110px;
+}
+.footer .item-footer .letter input[type="submit"] {
+    background-color: var(--orang-color);
+    color: #fff;
+    padding: 10px 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+/* ------------------ End Footer --------------------- */
+
+/* ------------------ Rsponsive --------------------- */
+/* ------------------ Screen 575px */
+@media (min-width:575px) {
+    /* Reused style */
+    .container {
+        width: 550px;
+        margin-inline: auto;
+    }
+        /* Clients */
+    .client ul {
+        grid-template-columns: repeat(3,1fr);
+    }
+        /* Section-01 */
+    .section-01 ul {
+        grid-template-columns: repeat(2,1fr);
+    }
+        /* Feedback */
+    .feedback .item-slid .img-user {
+        width: 200px;
+        margin-inline: auto;
+    }
+}
+/* ------------------ Screen 786px */
+@media (min-width:768px) {
+    /* Reused style */
+    .container {
+        width: 760px;
+        margin-inline: auto;
+    }
+}
+/* ------------------ Screen 992px */
+@media (min-width:992px) {
+    /* Reused style */
+    .container {
+        width: 990px;
+        margin-inline: auto;
+    }
+    /* Header */
+    .header .button-navbar,
+    .navbar-logo,
+    .overlay {
+        display: none;
+    }
+    .header .navbar {
+        all: unset;
+    }
+    .navbar-list{
+        padding-block-start: 0;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        padding-inline-start: 100px;
+    }
+    .menu-links {
+        display: flex;
+        gap: 15px;
+    }
+    .menu-link:is(:hover, :focus-visible){
+        padding: 0;
+    }
+    .header .logo {
+        width: 187px;
+        flex: 0 0 auto;
+    }
+    .header .navbar {
+        width: calc(100% - 187px);
+        flex: 0 0 auto;
+    }
+    .navbar-list .button {
+        background-image: linear-gradient(to left, #7c1c80, #FF6057);
+        color: var(--White-color);
+    }
+    /* Intro */
+    .intro {
+        min-height: 810px;
+    }
+    .intro .container {
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+    }
+    .intro .text {
+        text-align: start;
+        padding-inline-end: 100px;
+        display: block;
+    }
+    /*    (*)    bedeutet in Allem Elemate -->  margin-block-end  */
+    .intro .text *{
+        margin-block-end: 10px;
+        
+    }
+    .intro .text a {
+        margin-block-end: 0;
+        
+    }
+    /* Clients */
+    .client ul {
+        grid-template-columns: repeat(5,1fr);
+    }
+    /* Section-01 */
+    .section-01 {
+        position: relative;
+    }
+    .section-01 .container {
+        grid-template-columns: repeat(2,50%);
+        gap: 25px;
+        align-items: center;
+    }
+    .section-01::after {
+        content: '';
+        background-image: url(../section01/bg01.svg);
+        position: absolute;
+        bottom: -604px;
+        left: -382px;
+        width: 711px;
+        height: 761px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    /* Section-02 */
+    .section-02 .container {
+        grid-template-columns: repeat(2,50%);
+        gap: 30px;
+        align-items: center;
+    }
+    .section-02 .container .image {
+        order: -1;
+        scale: 1.5;
+        transform: translateX(-80px);
+    }
+    .section-item::after {
+        display: none;
+    }
+    /* Section-03 */
+    .section-03 .container p {
+        width: 625px;
+        margin: auto;
+    }
+    .section-03 {
+        position: relative;
+    }
+    .section-03::after {
+        content: '';
+        background-image: url(../section01/bg01.svg);
+        position: absolute;
+        bottom: -604px;
+        right: -382px;
+        width: 711px;
+        height: 761px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    /* Section-02 Right */
+    .section-02:is(.right) .text {
+        order: -1;
+    }
+    .section-02:is(.right) .image {
+        transform: translateX(80px);
+    }
+    /* Section-05 */
+    .section-05 .container{
+        grid-template-columns: repeat(2,50%);
+        gap: 50px;
+        align-items: center;
+    }
+    /* Numbers */
+    .numbers ul {
+        grid-template-columns: repeat(4,1fr);
+    }
+    /* FeedBaack */
+    .feedback .container {
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        gap: 25px;
+        align-items: center;
+    }
+    /* Footer */
+    .footer .container {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+/* ------------------ Screen 1200px */
+@media (min-width:1200px) {
+    /* Reused style */
+    .container {
+        width: 1180px;
+        /* margin-inline: auto; */
+    }
+    /* Header */
+    .navbar-list {
+        padding-inline-start: 200px;
+    }
+    .menu-links {
+        gap: 30px;
+    }
+    /* Intro */
+    .intro {
+        min-height: 915px;
+    }
+    .intro .text h4 {
+        font-size: 2.6rem;
+    }
+    .intro .image {
+        scale: 1.2;
+    }
+    /* Clients */
+    .client {
+        margin-block-start: -70px;
+    }
+    /* Section-01 */
+    .section-01 .text h2 {
+        font-size: 2rem;
+        max-width: 360px;
+    }
+    .section-01::after {
+        bottom: -737px;
+        left: -529px;
+        width: 939px;
+        height: 925px;
+    }
+    /* Section-02 */
+    .section-02 .text h3 {
+        font-size: 2rem;
+        max-width: 360px;
+    }
+    .section-03::after {
+        right: -382px;
+        bottom: -652px;
+        left: unset;
+        width: 831px;
+        height: 864px;
+    }
+    /* section-05 */
+    .section-05 .text h3 {
+        font-size: 2rem;
+        max-width: 360px;
+    }
+    /* section-05 */
+    .numbers h3 {
+        font-size: 2rem;
+        max-width: 360px;
+        margin-inline: auto;
+    }
+    /* Feedback */
+    .feedback .content-info h3 {
+        font-size: 2rem;
+        margin-inline: auto;
+    }
+    /* Footer */
+    .item-footer {
+        max-width: 345px;
+    }
+
+}
+/* ------------------ Screen 1400px */
+@media (min-width:1400px) {
+    /* Reused style */
+    .container {
+        width: 1350px;
+    }
+    /* Intro */
+    .intro {
+        min-height: 950px;
+    }
+    /* Clints */
+    .client {
+        margin-block-start: 20px;
+    }
+
+}
